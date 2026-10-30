@@ -1,0 +1,13 @@
+{
+  "benchmark": "datagate-profile-v1",
+  "rows_requested": 200000,
+  "rows_profiled": 200000,
+  "columns": 5,
+  "input_bytes": 10677818,
+  "elapsed_seconds": 10.323,
+  "rows_per_second": 19374.18,
+  "peak_traced_python_bytes": 235316,
+  "python_note": "tracemalloc does not include all native/runtime memory; do not equate this with process RSS.",
+  "environment": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python_version": "3.13.5"
+}

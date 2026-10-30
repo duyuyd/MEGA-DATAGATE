@@ -1,0 +1,4 @@
+customer_id,email,signup_date,age,country
+C001,alice@example.com,2026-01-02,34,US
+C002,bob@example.com,2026-01-03,29,VN
+C003,carol@example.com,2026-01-04,31,CA

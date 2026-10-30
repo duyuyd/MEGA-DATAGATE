@@ -1,0 +1,81 @@
+{
+  "format": "datagate-profile/v1",
+  "datagate_version": "0.1.0",
+  "source_name": "baseline_customers.csv",
+  "source_format": "csv",
+  "rows": 3,
+  "column_count": 5,
+  "row_errors": {},
+  "fields": [
+    {
+      "name": "customer_id",
+      "inferred_type": "string",
+      "row_count_observed": 3,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 3,
+      "distinct_estimate": 3,
+      "distinct_is_exact": true,
+      "unique_ratio_estimate": 1.0,
+      "minimum_numeric": null,
+      "maximum_numeric": null
+    },
+    {
+      "name": "email",
+      "inferred_type": "email",
+      "row_count_observed": 3,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 3,
+      "distinct_estimate": 3,
+      "distinct_is_exact": true,
+      "unique_ratio_estimate": 1.0,
+      "minimum_numeric": null,
+      "maximum_numeric": null
+    },
+    {
+      "name": "signup_date",
+      "inferred_type": "date",
+      "row_count_observed": 3,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 3,
+      "distinct_estimate": 3,
+      "distinct_is_exact": true,
+      "unique_ratio_estimate": 1.0,
+      "minimum_numeric": null,
+      "maximum_numeric": null
+    },
+    {
+      "name": "age",
+      "inferred_type": "integer",
+      "row_count_observed": 3,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 3,
+      "distinct_estimate": 3,
+      "distinct_is_exact": true,
+      "unique_ratio_estimate": 1.0,
+      "minimum_numeric": 29,
+      "maximum_numeric": 34
+    },
+    {
+      "name": "country",
+      "inferred_type": "string",
+      "row_count_observed": 3,
+      "null_count": 0,
+      "null_pct": 0.0,
+      "non_null_count": 3,
+      "distinct_estimate": 3,
+      "distinct_is_exact": true,
+      "unique_ratio_estimate": 1.0,
+      "minimum_numeric": null,
+      "maximum_numeric": null
+    }
+  ],
+  "privacy": "No raw cell values are stored in this profile.",
+  "algorithms": {
+    "distinct_count": "exact up to 512 values per column, then HyperLogLog (p=12)",
+    "memory": "bounded cardinality sketch per column; rows are streamed"
+  }
+}

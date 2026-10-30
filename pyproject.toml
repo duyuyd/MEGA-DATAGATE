@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mega-datagate"
+version = "0.1.0"
+description = "Local-first intelligent data intake, profiling, schema drift detection, validation, and safe cleaning."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "MEGA DataGate contributors" }]
+keywords = ["data-quality", "data-validation", "schema-drift", "csv", "jsonl", "local-first"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Database",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = []
+
+[project.scripts]
+datagate = "datagate.cli:main"
+
+[tool.setuptools]
+packages = ["datagate"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MEGA DataGate Contract v1",
+  "description": "Versioned validation and explicit-cleaning rules for a DataGate intake dataset.",
+  "type": "object",
+  "required": ["format", "fields"],
+  "properties": {
+    "format": { "const": "datagate-contract/v1" },
+    "dataset": { "type": "string" },
+    "strict_columns": { "type": "boolean", "default": false },
+    "notes": { "type": "string" },
+    "fields": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "type": { "enum": ["string", "integer", "number", "boolean", "email", "date", "url", "uuid", "ip"] },
+          "required": { "type": "boolean", "default": true },
+          "nullable": { "type": "boolean", "default": true },
+          "unique": { "type": "boolean", "default": false },
+          "min": { "type": "number" },
+          "max": { "type": "number" },
+          "allowed": { "type": "array", "items": { "type": ["string", "number", "boolean", "null"] } },
+          "pattern": { "type": "string" },
+          "trim": { "type": "boolean", "default": false },
+          "empty_as_null": { "type": "boolean", "default": false },
+          "case": { "enum": ["lower", "upper", "title"] }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

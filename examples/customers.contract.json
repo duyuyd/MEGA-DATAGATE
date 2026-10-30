@@ -1,0 +1,44 @@
+{
+  "format": "datagate-contract/v1",
+  "dataset": "customers",
+  "strict_columns": false,
+  "fields": {
+    "customer_id": {
+      "type": "string",
+      "required": true,
+      "nullable": false,
+      "unique": true,
+      "trim": true,
+      "pattern": "^C[0-9]{3}$"
+    },
+    "customer_email": {
+      "type": "email",
+      "required": true,
+      "nullable": false,
+      "unique": true,
+      "trim": true,
+      "case": "lower"
+    },
+    "signup_date": {
+      "type": "date",
+      "required": true,
+      "nullable": false,
+      "trim": true
+    },
+    "age": {
+      "type": "integer",
+      "required": true,
+      "nullable": true,
+      "min": 0,
+      "max": 120
+    },
+    "country": {
+      "type": "string",
+      "required": true,
+      "nullable": false,
+      "allowed": ["US", "VN", "CA"],
+      "trim": true,
+      "case": "upper"
+    }
+  }
+}
