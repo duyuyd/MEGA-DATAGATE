@@ -203,3 +203,4 @@ See [PRODUCT_SPEC.md](docs/PRODUCT_SPEC.md), [ARCHITECTURE.md](docs/ARCHITECTURE
 ## License
 
 MIT. See [LICENSE](LICENSE).
+\n## GitHub standardization (2026-11-21)\n\nMEGA DataGate is an independent Python CLI, not NuvoraCraft. The feature-branch automation standardizes only legacy text labels, retaining data contracts, paths, schema semantics and local-first privacy behavior. No Capacitor APK workflow applies to this repository. Merge requires Founder verification.\n
